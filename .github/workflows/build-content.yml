@@ -6,7 +6,7 @@ on:
     tags-ignore:
       - '**'
     paths:
-      - 'mystaticsite/**'
+      - 'cloudrefresh/**'
 jobs:
   deploy-content:
     runs-on: ubuntu-latest
