@@ -10,7 +10,7 @@ home = "Home"
 # Meta data
 description = "cloud"
 # copyright
-copyright = "Created by [@milldr](https://github.com/milldr) | Copyright 2020 &copy; [cloudrefresh](https://github.com/milldr/cloudrefreshio/)"
+copyright = "Created by [@milldr](https://github.com/milldr) | Copyright 2020 &copy; [cloudrefresh](https://github.com/milldr/cloudrefresh/)"
 
 # Preloader
 [params.preloader]
