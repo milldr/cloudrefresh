@@ -1,0 +1,57 @@
+
+########################### Default parameters ##########################
+
+baseURL = "https://cloudrefresh.io/"
+languageCode = "en-us"
+title = "Cloud Refresh"
+
+[params]
+home = "Home"
+# Meta data
+description = "cloud"
+# copyright
+copyright = "Created by [@milldr](https://github.com/milldr) | Copyright 2020 &copy; [cloudrefresh](https://github.com/milldr/cloudrefreshio/)"
+
+# Preloader
+[params.preloader]
+enable = true
+preloader = "" # use .png , .svg or .gif format
+
+[deployment]
+order = [".png$", ".jpg$", ".gif$", ".svg$"]
+
+[[deployment.targets]]
+URL = "s3://cloudrefresh.io?region=us-west-2"
+
+[[deployment.matchers]]
+pattern = "^.+\\.(js|css|png|jpg|gif|svg|ttf|woff|eot|xml)$"
+cacheControl = "max-age=120, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true
+
+
+#################################### Plugins ##########################################
+[params.plugins]
+  [[params.plugins.js]]
+  URL = "css/jquery-3.5.1.min.js"
+  [[params.plugins.css]]
+  URL = "css/bootstrap.min.css"
+  [[params.plugins.js]]
+  URL = "js/bootstrap.min.js"
+
+###################################### Navigation ######################################
+[menu]
+
+  [[menu.main]]
+  name = "Services"
+  URL = "services"
+  weight = 1
+
+  [[menu.main]]
+  name = "Contact"
+  URL = "contact"
+  weight = 2
+

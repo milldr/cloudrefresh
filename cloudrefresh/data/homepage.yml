@@ -1,0 +1,24 @@
+banner:
+  enable: true
+  title: "Cloud Refresh"
+  subtitle: "let me fix your shit"
+  image: ""
+
+services:
+  enable: true
+  title: "Services"
+  services:
+    - title: "Pipeline Automation"
+      content: "Add push automation behind each push."
+      image: ""
+    - title: "Codify your Infrastructure"
+      content: "Convert your infrastructure deployments to code."
+      image: ""
+    - title: "Latest and Greatest"
+      content: "Architecture review and recommendations"
+      image: ""
+
+
+contact:
+  enable: true
+  title: "Contact"
