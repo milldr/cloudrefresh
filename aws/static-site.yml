@@ -4,9 +4,6 @@ Parameters:
   SiteName:
     Default: "cloudrefresh.io"
     Type: String
-  AcmCertArn:
-    Default: "arn:aws:acm:us-east-1:437357098352:certificate/30fb9138-d644-4d91-b5a4-519270790e84" # created in console
-    Type: String
   HostedzoneID: 
     Default: Z2FDTNDATAQYW2 # This is always the hosted zone ID when you create an alias record that routes traffic to a CloudFront distribution.
     Type: String
@@ -31,6 +28,11 @@ Resources:
           Action: "s3:GetObject"
           Resource: !Sub "arn:aws:s3:::${ SiteName }/*"
       Bucket: !Ref StaticContent
+  AcmCert:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: String
+      ValidationMethod: DNS
   CloudfrontDistro:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -61,7 +63,7 @@ Resources:
           ViewerProtocolPolicy: redirect-to-https
         PriceClass: PriceClass_All
         ViewerCertificate:
-          AcmCertificateArn: !Ref AcmCertArn
+          AcmCertificateArn: !Ref AcmCert
           SslSupportMethod: sni-only
     DependsOn:
       - StaticContent
