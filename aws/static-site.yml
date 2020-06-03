@@ -1,4 +1,9 @@
 # Deploy a resources for static site
+#
+# Note: For the first deployment, AWS requires that you manually add the CNAME for the new ACM Cert to your domain. 
+# "When you use the AWS::CertificateManager::Certificate resource in an AWS CloudFormation stack, the stack will remain in the CREATE_IN_PROGRESS state. Further stack operations will be delayed until you validate the certificate request, either by acting upon the instructions in the validation email, or by adding a CNAME record to your DNS configuration."
+#
+#
 AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   SiteName:
@@ -68,6 +73,7 @@ Resources:
     DependsOn:
       - StaticContent
       - BucketPolicy
+      - AcmCert
   CloudfrontOriginAccessIdentity:
     Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
     Properties:
