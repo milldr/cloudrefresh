@@ -68,7 +68,6 @@ Resources:
     DependsOn:
       - StaticContent
       - BucketPolicy
-      - AcmCert
   CloudfrontOriginAccessIdentity:
     Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
     Properties:
