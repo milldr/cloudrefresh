@@ -1,7 +1,7 @@
 banner:
   enable: true
   title: "Cloud Refresh"
-  subtitle: "let me fix your shit"
+  subtitle: "i am a subtitle"
   image: ""
 
 services:

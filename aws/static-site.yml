@@ -33,6 +33,18 @@ Resources:
           Action: "s3:GetObject"
           Resource: !Sub "arn:aws:s3:::${ SiteName }/*"
       Bucket: !Ref StaticContent
+  AcmCert:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Ref SiteName
+      SubjectAlternativeNames: 
+          - !Sub "www.${ SiteName }"
+      ValidationMethod: DNS
+  CloudfrontOriginAccessIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: !Sub 'CloudFront OAI for ${ SiteName }'
   CloudfrontDistro:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -70,18 +82,6 @@ Resources:
       - BucketPolicy
       - CloudfrontOriginAccessIdentity
       - AcmCert
-  AcmCert:
-    Type: AWS::CertificateManager::Certificate
-    Properties:
-      DomainName: !Ref SiteName
-      SubjectAlternativeNames: 
-          - !Sub "www.${ SiteName }"
-      ValidationMethod: DNS
-  CloudfrontOriginAccessIdentity:
-    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
-    Properties:
-      CloudFrontOriginAccessIdentityConfig:
-        Comment: !Sub 'CloudFront OAI for ${ SiteName }'
   Dns:
     Type: AWS::Route53::RecordSetGroup
     Properties:
