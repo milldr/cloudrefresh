@@ -1,8 +1,8 @@
 banner:
   enable: true
   title: "Cloud Refresh"
-  subtitle: "i am a subtitle"
-  image: ""
+  subtitle: "WEBSITE WIP 6/12/20: Let us help you refresh your cloud - \nWe'll suggest a solution and work with you to build and maintain your architecture."
+  bgImage: ""
 
 services:
   enable: true

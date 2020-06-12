@@ -1,9 +1,14 @@
 {{- if .Site.Data.homepage.banner.enable }}
 {{- with .Site.Data.homepage.banner }}
-<section class="section">
+<section class="section banner">
 	<div class="container">
 		<div class="row">
-      <p>I am banner. dont make me angry</p>
+
+      <div class="col-md-12 h-100 text-center ">
+        <h1>{{ .title }}</h1>
+        <p>{{ .subtitle }}</p>
+      </div>
+
 		</div><!-- .row close -->
 	</div><!-- .container close -->
 </section><!-- header close -->

@@ -3,7 +3,7 @@
 
 baseURL = "https://cloudrefresh.io/"
 languageCode = "en-us"
-title = "Cloud Refresh"
+title = "CloudRefresh"
 
 [params]
 home = "Home"
@@ -44,6 +44,8 @@ gzip = true
   URL = "css/bootstrap.min.css"
   [[params.plugins.js]]
   URL = "js/bootstrap.min.js"
+  [[params.plugins.css]]
+  URL = "https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans&display=swap"
 
 ###################################### Navigation ######################################
 [menu]
