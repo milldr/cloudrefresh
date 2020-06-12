@@ -21,7 +21,7 @@ preloader = "" # use .png , .svg or .gif format
 order = [".png$", ".jpg$", ".gif$", ".svg$"]
 
 [[deployment.targets]]
-URL = "s3://cloudrefresh.io?region=us-west-2"
+URL = "s3://cloudrefresh.io?region=us-east-1"
 
 [[deployment.matchers]]
 pattern = "^.+\\.(js|css|png|jpg|gif|svg|ttf|woff|eot|xml)$"
