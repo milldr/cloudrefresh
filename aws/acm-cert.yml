@@ -33,6 +33,11 @@ Resources:
           Action: "s3:GetObject"
           Resource: !Sub "arn:aws:s3:::${ SiteName }/*"
       Bucket: !Ref StaticContent
+  AcmCert:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Ref SiteName
+      ValidationMethod: DNS
   CloudfrontDistro:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -62,9 +67,13 @@ Resources:
               Forward: all
           ViewerProtocolPolicy: redirect-to-https
         PriceClass: PriceClass_All
+        ViewerCertificate:
+          AcmCertificateArn: !Ref AcmCert
+          SslSupportMethod: sni-only
     DependsOn:
       - StaticContent
       - BucketPolicy
+      - AcmCert
   CloudfrontOriginAccessIdentity:
     Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
     Properties:
