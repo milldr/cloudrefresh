@@ -62,9 +62,19 @@ Resources:
               Forward: all
           ViewerProtocolPolicy: redirect-to-https
         PriceClass: PriceClass_All
+        ViewerCertificate:
+          AcmCertificateArn: !Ref AcmCert
+          SslSupportMethod: sni-only
     DependsOn:
       - StaticContent
       - BucketPolicy
+      - CloudfrontOriginAccessIdentity
+      - AcmCert
+  AcmCert:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Ref SiteName
+      ValidationMethod: DNS
   CloudfrontOriginAccessIdentity:
     Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
     Properties:
