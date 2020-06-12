@@ -11,6 +11,9 @@ home = "Home"
 description = "cloud"
 # copyright
 copyright = "Created by [@milldr](https://github.com/milldr) | Copyright 2020 &copy; [cloudrefresh](https://github.com/milldr/cloudrefresh/)"
+# Google analytics
+google_analytics_id = "UA-164491077-2"
+
 
 # Preloader
 [params.preloader]
