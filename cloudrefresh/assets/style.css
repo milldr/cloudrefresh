@@ -2,10 +2,20 @@
   --font-primary: 'Work Sans', sans-serif;
   --font-secondary: 'Roboto', sans-serif;
 
-  --color-background-primary: white;
-  --color-background-secondary: blue;
+  --color-1: #EEEEFF;
+  --color-2: #7F7CAF;
+  --color-3: #9FB4C7;
+  --color-4: #28587B;
+  --color-5: #9FB798;
+
+  --color-background-primary: var(--color-1);
+  --color-background-secondary: var(--color-4);
+  --color-background-ternary: var(--color-5);
+  --font-on-dark: var(--color-1);
+  --font-on-light: black;
     
   background-color: var(--color-background-primary);
+  color: var(--font-on-light);
 }
 
 
@@ -15,10 +25,108 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-.banner p {
-    font-size: 20px;
+p {
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.section {
+  padding: 5vh 25px;
 }
 
 .banner {
-    background-color: var(--color-background-secondary);
+  background-color: var(--color-background-secondary);
+  padding: 20vh 0;
+  color: var(--font-on-dark);
 }
+
+.contact {
+  background-color: var(--color-background-ternary);
+  padding: 10vh 0;
+  color: var(--font-on-dark);
+}
+
+.button {
+  color: var(--font-on-dark);
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 30px 75px;
+  display: inline-block;
+  background-color: var(--color-4);
+  box-shadow: 0 30px 75px var(--color-3);
+}
+
+.button:hover, .button:focus {
+  background-color: var(--color-4);
+  color: var(--font-on-dark);
+}
+
+a:focus,
+.btn:focus,
+.btn:active:focus {
+  box-shadow: none;
+  outline: 0 none;
+}
+
+
+/* ----------
+ *
+ * layout formatting
+ *
+ * ---- */
+  
+#preloader-wrapper {
+  background-color: var(--primary-color);
+  bottom: auto;
+  height: 100%;
+  left: auto;
+  position: fixed;
+  right: auto;
+  top: auto;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre-loader {
+  width: 130px;
+  height: 130px;
+  background: var(--second-color);
+  border-radius: 50%;
+  animation: loading 6s infinite reverse linear;
+  position: relative;
+  font-family: var(--font-ternary) !important;
+}
+
+.pre-loader:before {
+  content: "\f3bd";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  font-size: 40px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: var(--primary-color);
+}
+
+/* navigation */
+.navbar-brand {
+  color: var(--text-grey);
+  font-size: 25px;
+  margin: 0;
+  line-height: 1;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--text-grey);
+}
+

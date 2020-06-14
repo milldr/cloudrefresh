@@ -1,9 +1,37 @@
 {{- if .Site.Data.homepage.services.enable }}
 {{- with .Site.Data.homepage.services }}
-<section class="section">
+<section class="section services">
 	<div class="container">
 		<div class="row">
-      <p>I services</p>
+
+
+      <div class="col-md-12 text-center">
+        <h2>{{ .title }}</h2>
+        {{ range $index, $element := .services }}
+          
+        {{ if ne (mod $index 2) 1 }}
+        <div class="row">
+          <div class="col-md-8 text-left ">
+            <h3> {{.title}} </h3>
+            <p> {{ .content | markdownify }} </p>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+
+        {{ else }}
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-8 order-2 text-right">
+            <h3> {{.title}} </h3>
+            <p> {{ .content | markdownify }} </p>
+          </div>
+        </div>
+        {{ end }}
+        
+        {{ end }}
+
+      </div>
+
 		</div><!-- .row close -->
 	</div><!-- .container close -->
 </section><!-- header close -->

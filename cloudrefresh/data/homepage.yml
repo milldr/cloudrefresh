@@ -1,24 +1,30 @@
 banner:
   enable: true
-  title: "Cloud Refresh"
-  subtitle: "WEBSITE WIP 6/12/20: Let us help you refresh your cloud - \nWe'll suggest a solution and work with you to build and maintain your architecture."
-  bgImage: ""
+  title: "Jump start your Cloud environment"
+  subtitle: "CloudRefresh guides your cloud transformation with automation first, enabling developers and allowing you spend more time on what you love."
 
 services:
   enable: true
-  title: "Services"
+  title: "Core Services"
   services:
+    - title: "Codify your Infrastructure"
+      content: "Convert your infrastructure to code."
+      image: ""
     - title: "Pipeline Automation"
       content: "Add push automation behind each push."
-      image: ""
-    - title: "Codify your Infrastructure"
-      content: "Convert your infrastructure deployments to code."
       image: ""
     - title: "Latest and Greatest"
       content: "Architecture review and recommendations"
       image: ""
 
+about:
+  enable: false
+  title: "About Us"
+  content: "Based in Portland, Oregon."
 
 contact:
   enable: true
-  title: "Contact"
+  title: "Contact Us"
+  content: "Ready to CloudRefresh? Reach out today for a free consultation!"
+  email: miller0daniel@gmail.com
+

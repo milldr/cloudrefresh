@@ -1,12 +1,12 @@
-{{- if .Site.Data.homepage.banner.enable }}
-{{- with .Site.Data.homepage.banner }}
-<section class="section banner">
+{{- if .Site.Data.homepage.about.enable }}
+{{- with .Site.Data.homepage.about }}
+<section class="section about">
 	<div class="container">
 		<div class="row">
 
-      <div class="col-md-7 h-100 text-left ">
+      <div class="col-md-12 h-100 text-center ">
         <h1>{{ .title }}</h1>
-        <p>{{ .subtitle }}</p>
+        <p>{{ .content }}</p>
       </div>
 
 		</div><!-- .row close -->
