@@ -10,7 +10,7 @@ home = "Home"
 # Meta data
 description = "cloud"
 # copyright
-copyright = "Created by [@milldr](https://github.com/milldr) | Copyright 2020 &copy; [cloudrefresh](https://github.com/milldr/cloudrefresh/)"
+copyright = "Copyright 2020 &copy; [cloudrefresh](https://github.com/milldr/cloudrefresh/)"
 # Google analytics
 google_analytics_id = "UA-164491077-2"
 
@@ -53,10 +53,10 @@ gzip = true
   [[menu.main]]
   name = "Services"
   URL = "services"
-  weight = 1
+  weight = 3
 
   [[menu.main]]
   name = "Contact"
   URL = "contact"
-  weight = 2
+  weight = 5
 

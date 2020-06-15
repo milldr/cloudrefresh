@@ -8,13 +8,13 @@ services:
   title: "Core Services"
   services:
     - title: "Codify your Infrastructure"
-      content: "Convert your infrastructure to code."
+      content: "Convert your existing or create new infrastructure with code, allowing for easier maintenance and control."
       image: ""
     - title: "Pipeline Automation"
-      content: "Add push automation behind each push."
+      content: "Add automation behind each push. Push early and often with confidence."
       image: ""
     - title: "Latest and Greatest"
-      content: "Architecture review and recommendations"
+      content: "Architecture review and recommendations. Minor tweaks, major overhauls, and everything in between -- find the right fit for you."
       image: ""
 
 about:
@@ -26,5 +26,5 @@ contact:
   enable: true
   title: "Contact Us"
   content: "Ready to CloudRefresh? Reach out today for a free consultation!"
-  email: miller0daniel@gmail.com
+  email: cloudrefreshio@gmail.com
 

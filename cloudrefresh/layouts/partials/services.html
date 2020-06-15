@@ -1,5 +1,6 @@
 {{- if .Site.Data.homepage.services.enable }}
 {{- with .Site.Data.homepage.services }}
+<a class="anchor" id="services"></a>
 <section class="section services">
 	<div class="container">
 		<div class="row">
@@ -11,17 +12,17 @@
           
         {{ if ne (mod $index 2) 1 }}
         <div class="row">
-          <div class="col-md-8 text-left ">
+          <div class="col-md-5 text-justify">
             <h3> {{.title}} </h3>
             <p> {{ .content | markdownify }} </p>
           </div>
-          <div class="col-md-4"></div>
+          <div class="col-md-7"></div>
         </div>
 
         {{ else }}
         <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-8 order-2 text-right">
+          <div class="col-md-7"></div>
+          <div class="col-md-5 order-2 text-justify">
             <h3> {{.title}} </h3>
             <p> {{ .content | markdownify }} </p>
           </div>

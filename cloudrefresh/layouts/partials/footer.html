@@ -4,16 +4,6 @@
       <div class="col-md-12">
         <div class="block">
           <a href="{{ .Site.BaseURL }}" class="footer-logo mb-4">{{ if .Site.Params.logo }} <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}"> {{ else }} {{ .Title }} {{ end }}</a>
-          <ul class="list-inline footer-menu">
-            <li class="list-inline-item">
-              <a href="{{ .Site.BaseURL }}">{{ .Site.Params.home }}</a>
-            </li>
-            {{ range .Site.Menus.main }}
-            <li class="list-inline-item">
-              <a class="page-scroll" href="#{{ .URL }}">{{ .Name }}</a>
-            </li>
-            {{ end }}
-          </ul>
           <p class="copyright-text">{{ .Site.Params.copyright | markdownify }}</p>
         </div>
       </div>
