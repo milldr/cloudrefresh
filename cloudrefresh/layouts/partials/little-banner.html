@@ -1,0 +1,15 @@
+{{- if .Site.Data.homepage.contact.enable }}
+{{- with .Site.Data.homepage.contact }}
+<section class="section little-banner">
+	<div class="container">
+		<div class="row">
+
+      <div class="col-md-7 h-100 text-left ">
+        <h1 class="little-banner-header">{{ .content | markdownify }}</h1>
+      </div>
+
+		</div><!-- .row close -->
+	</div><!-- .container close -->
+</section><!-- header close -->
+{{- end }}
+{{- end }}

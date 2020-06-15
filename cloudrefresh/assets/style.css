@@ -11,6 +11,7 @@
   --color-background-primary: var(--color-1);
   --color-background-secondary: var(--color-4);
   --color-background-ternary: var(--color-5);
+  --footer-color: var(--color-4);
   --font-on-dark: var(--color-1);
   --font-on-light: black;
     
@@ -39,6 +40,17 @@ p {
   background-color: var(--color-background-secondary);
   padding: 20vh 0;
   color: var(--font-on-dark);
+}
+
+.little-banner {
+  background-color: var(--color-background-secondary);
+  padding: 10vh 0;
+  color: var(--font-on-dark);
+}
+.little-banner-header {
+  text-transform: capitalize;
+  font-size: 32px;
+  text-align: justify;
 }
 
 .contact {
@@ -145,7 +157,7 @@ a.anchor {
 
 footer {
   text-align: center;
-  background: var(--color-4);
+  background: var(--footer-color);
   padding: 50px 0px;
 }
 
