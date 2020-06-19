@@ -13,6 +13,8 @@ description = "cloud"
 copyright = "Copyright 2020 &copy; [cloudrefresh](https://github.com/milldr/cloudrefresh/)"
 # Google analytics
 google_analytics_id = "UA-164491077-2"
+# logo for header
+logo = "images/logo.svg"
 
 
 # Preloader
@@ -46,6 +48,8 @@ gzip = true
   URL = "js/bootstrap.min.js"
   [[params.plugins.css]]
   URL = "https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans&display=swap"
+  [[params.plugins.css]]
+  URL = "https://fonts.googleapis.com/css2?family=MuseoModerno:wght@800&display=swap"
 
 ###################################### Navigation ######################################
 [menu]
