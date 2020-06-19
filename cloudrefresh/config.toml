@@ -4,6 +4,7 @@
 baseURL = "https://cloudrefresh.io/"
 languageCode = "en-us"
 title = "CloudRefresh"
+logo = "images/logo.svg"
 
 [params]
 home = "Home"
